@@ -1,7 +1,10 @@
 ---
 
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import { indexTranslations } from "@/translations/index.js";
 
+const lang = 'es';
+const t = indexTranslations[lang];
 ---
 
 <Layout title="Eduardo PC">
@@ -12,15 +15,15 @@ import Layout from "../layouts/Layout.astro";
 			<span class="block"> EDUARDO </span>
 			<span class="block"> POOT </span>
 		</p>
-		<p class="text-gray-300 text-xl text-center mt-4">Desarrollador Web</p>
+		<p class="text-gray-300 text-xl text-center mt-4">{t.description}</p>
 		<div class="flex justify-center">
 			<a
 				href="/cv-eduardo.pdf"
 				download
 				class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition block w-fit"
-				aria-label="Descargar currículum en PDF"
+				aria-label={t.cvButton}
 			>
-				Descargar CV
+				{t.cvButton}
 			</a>
 		</div>
 	</main>

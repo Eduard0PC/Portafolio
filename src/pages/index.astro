@@ -1,16 +1,16 @@
 ---
-
 import Layout from "@/layouts/Layout.astro";
 import { indexTranslations } from "@/translations/index.js";
-
-const lang = 'es';
+import { ClientRouter } from "astro:transitions";
+const lang = "es";
 const t = indexTranslations[lang];
 ---
 
 <Layout title="Eduardo PC">
 	<main>
 		<p
-			class="text-yellow-400 text-center text-4xl md:text-9xl font-bold mt-16"
+			id="main-name"
+			class="text-yellow-400 text-center text-4xl md:text-9xl font-bold mt-16 transition-all duration-500 opacity-100 translate-y-0"
 		>
 			<span class="block"> EDUARDO </span>
 			<span class="block"> POOT </span>

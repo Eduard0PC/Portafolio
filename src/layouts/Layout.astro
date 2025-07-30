@@ -22,5 +22,29 @@ const { title, lang } = Astro.props;
 		</div>
 		<Header />
 		<slot />
+        <script>
+            window.addEventListener("scroll", () => {
+                const mainName = document.getElementById("main-name");
+                const headerName = document.getElementById("header-name");
+                const header = document.querySelector("header");
+                if (!mainName || !headerName || !header) return;
+                const rect = mainName.getBoundingClientRect();
+                if (rect.bottom < 80) {
+                    headerName.classList.remove("hidden");
+                    headerName.classList.add("opacity-100", "translate-y-0");
+                    headerName.classList.remove("opacity-0", "-translate-y-4");
+                    mainName.classList.add("opacity-0", "-translate-y-4");
+                    mainName.classList.remove("opacity-100", "translate-y-0");
+                    header.classList.add("bg-header-dark");
+                } else {
+                    headerName.classList.add("hidden");
+                    headerName.classList.remove("opacity-100", "translate-y-0");
+                    headerName.classList.add("opacity-0", "-translate-y-4");
+                    mainName.classList.remove("opacity-0", "-translate-y-4");
+                    mainName.classList.add("opacity-100", "translate-y-0");
+                    header.classList.remove("bg-header-dark");
+                }
+            });
+        </script>
 	</body>
 </html>

@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 html {
-    font-family: "Orbitron Variable", sans-serif;
-    scroll-behavior: smooth;
+    font-family: "Orbitron Variable", sans-serif; 
+    
 }
 
 body {
     margin: 0;
     width: 100%;
     height: 100%;
+    color: white;
 }
 
 .bg-header-dark {

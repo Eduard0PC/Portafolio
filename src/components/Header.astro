@@ -32,8 +32,8 @@ const t = headerTranslations[lang];
       ></span>
     </a>
     <a
-      href="#skills"
-      class="group relative text-white hover:text-yellow-400 transition-all duration-300 flex items-center gap-2"
+      class="cursor-pointer group relative text-white hover:text-yellow-400 transition-all duration-300 flex items-center gap-2"
+      onclick="document.querySelector('#skills').scrollIntoView({ behavior: 'smooth' });"
     >
       <Skills class="size-5" />
       {t.skills}

@@ -2,6 +2,7 @@
 import GitHubIcon from "@/components/icons/GitHubIcon.astro";
 import GmailIcon from "@/components/icons/GmailIcon.astro";
 import InstagramIcon from "@/components/icons/InstagramIcon.astro";
+import LetterboxdIcon from "@/components/icons/LetterboxdIcon.astro";
 import SocialMedia from "@/components/SocialMedia.astro";
 import Layout from "@/layouts/Layout.astro";
 import { indexTranslations } from "@/translations/index.js";
@@ -14,7 +15,7 @@ const t = indexTranslations[lang];
 	description="Portafolio personal de Eduardo Poot, un desarrollador y programador web con experiencia en tecnologías modernas. Explora mis proyectos, habilidades y más."
 >
 	<main>
-		<section id="home" class="scroll-mt-28 mt-32">
+		<section id="home" class="scroll-mt-32 mt-32">
 			<p
 				id="main-name"
 				class="text-yellow-400 text-center text-4xl md:text-9xl font-bold mt-16 transition-all duration-500 opacity-100 translate-y-0"
@@ -34,7 +35,11 @@ const t = indexTranslations[lang];
 					<InstagramIcon class="size-6" />
 					Instagram
 				</SocialMedia>
-				<SocialMedia href="">
+				<SocialMedia href="https://letterboxd.com/Edu4rd0_/">
+					<LetterboxdIcon class="size-6" />
+					Letterboxd
+				</SocialMedia>
+				<SocialMedia href="https://mail.google.com/">
 					<GmailIcon class="size-6" />
 					eduardopoot83@gmail.com
 				</SocialMedia>
@@ -50,9 +55,9 @@ const t = indexTranslations[lang];
 				</a>
 			</div>
 		</section>
-		<section id="about" class="scroll-mt-28 mt-20 mb-100">
+		<section id="about" class="scroll-mt-28 mt-20">
 			<div
-				class="container mx-auto max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 border border-gray-700 rounded-lg p-8 shadow-lg"
+				class="container mx-auto max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 border border-gray-700 rounded-lg p-8 shadow-lg bg-gray-900/50 backdrop-blur-md"
 			>
 				<div class="md:w-1/2 text-center md:text-left md:mx-auto">
 					<h2 class="text-yellow-400 text-4xl font-bold mb-4">
@@ -61,22 +66,29 @@ const t = indexTranslations[lang];
 					<p
 						class="text-gray-300 text-lg leading-relaxed tracking-wide"
 					>
-						{t.about.intro} <span class="text-yellow-300 font-semibold"
+						{t.about.intro}
+						<span class="text-yellow-300 font-semibold"
 							>Eduardo Poot</span
-						>{t.about.description} <span
-							class="text-yellow-300"
-							>Javascript, Astro, React, Node.js</span
-						> {t.about.closing}
+						>{t.about.description}
+						<span class="text-yellow-300"
+							>Backend/Frontend</span
+						>
+						{t.about.closing}
 					</p>
 				</div>
 				<div class="md:w-1/2 flex justify-center">
 					<img
-						src="/favicon.svg"
-						alt="Foto de Eduardo Poot"
-						class="rounded-full w-64 h-64 object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+						src="/me.jpg"
+						alt="Eduardo Poot"
+						class="rounded-full size-64 object-cover shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_40px_10px_#fde04766]"
 					/>
 				</div>
 			</div>
+		</section>
+		<section id="skills" class="scroll-mt-28 mt-20 mb-200">
+			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+				{t.skills}
+			</h2>
 		</section>
 	</main>
 </Layout>

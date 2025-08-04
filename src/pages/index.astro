@@ -9,12 +9,12 @@ const lang = "es";
 const t = indexTranslations[lang];
 ---
 
-<Layout 
-title="Portafolio de Eduardo Poot - Desarrollador y programador Web"
-description="Portafolio personal de Eduardo Poot, un desarrollador y programador web con experiencia en tecnologías modernas. Explora mis proyectos, habilidades y más."
+<Layout
+	title="Portafolio de Eduardo Poot - Desarrollador y programador Web"
+	description="Portafolio personal de Eduardo Poot, un desarrollador y programador web con experiencia en tecnologías modernas. Explora mis proyectos, habilidades y más."
 >
 	<main>
-		<section id="home" class="scroll-mt-20">
+		<section id="home" class="scroll-mt-28 mt-32">
 			<p
 				id="main-name"
 				class="text-yellow-400 text-center text-4xl md:text-9xl font-bold mt-16 transition-all duration-500 opacity-100 translate-y-0"
@@ -48,6 +48,34 @@ description="Portafolio personal de Eduardo Poot, un desarrollador y programador
 				>
 					{t.cvButton}
 				</a>
+			</div>
+		</section>
+		<section id="about" class="scroll-mt-28 mt-20 mb-100">
+			<div
+				class="container mx-auto max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 border border-gray-700 rounded-lg p-8 shadow-lg"
+			>
+				<div class="md:w-1/2 text-center md:text-left md:mx-auto">
+					<h2 class="text-yellow-400 text-4xl font-bold mb-4">
+						{t.about.title}
+					</h2>
+					<p
+						class="text-gray-300 text-lg leading-relaxed tracking-wide"
+					>
+						{t.about.intro} <span class="text-yellow-300 font-semibold"
+							>Eduardo Poot</span
+						>{t.about.description} <span
+							class="text-yellow-300"
+							>Javascript, Astro, React, Node.js</span
+						> {t.about.closing}
+					</p>
+				</div>
+				<div class="md:w-1/2 flex justify-center">
+					<img
+						src="/favicon.svg"
+						alt="Foto de Eduardo Poot"
+						class="rounded-full w-64 h-64 object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+					/>
+				</div>
 			</div>
 		</section>
 	</main>

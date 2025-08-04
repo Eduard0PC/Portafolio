@@ -4,30 +4,31 @@ import "@fontsource-variable/orbitron";
 import "../styles/global.css";
 
 interface Props {
-	title: string;
-	description: string;
-	lang?: string;
+    title: string;
+    description: string;
+    lang?: string;
 }
 const { title, description, lang } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div
-			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-		>
-		</div>
-		<Header />
-		<slot />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <div
+            class="fixed top-0 left-0 w-full min-h-screen -z-10 bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+        >
+        </div>
+
+        <Header />
+        <slot />
         <script>
             window.addEventListener("scroll", () => {
                 const mainName = document.getElementById("main-name");
@@ -35,7 +36,7 @@ const { title, description, lang } = Astro.props;
                 const header = document.querySelector("header");
                 if (!mainName || !headerName || !header) return;
                 const rect = mainName.getBoundingClientRect();
-                if (rect.bottom < 80) {
+                if (rect.bottom < 170) {
                     headerName.classList.remove("hidden");
                     headerName.classList.add("opacity-100", "translate-y-0");
                     headerName.classList.remove("opacity-0", "-translate-y-4");
@@ -52,5 +53,5 @@ const { title, description, lang } = Astro.props;
                 }
             });
         </script>
-	</body>
+    </body>
 </html>

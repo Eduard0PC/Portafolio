@@ -13,7 +13,7 @@ body {
 }
 
 .bg-header-dark {
-    background: rgba(20, 20, 20, 0.7);
+    background: rgba(15, 15, 15, 0.7);
     backdrop-filter: blur(4px);
     transition: background 0.3s;
 }

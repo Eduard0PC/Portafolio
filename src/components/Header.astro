@@ -12,8 +12,8 @@ const t = headerTranslations[lang];
 <header class="fixed top-0 left-0 w-full z-50 flex justify-center py-4 px-6">
   <nav class="flex gap-12">
     <a
-      href="#about"
-      class="group relative text-white hover:text-yellow-400 transition-all duration-300 flex items-center gap-2"
+      class="cursor-pointer group relative text-white hover:text-yellow-400 transition-all duration-300 flex items-center gap-2"
+      onclick="document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });"
     >
       <About class="size-5" />
       {t.about}

@@ -12,15 +12,11 @@ import NodeIcon from "./icons/tech/NodeIcon.astro";
 import ExpressIcon from "./icons/tech/ExpressIcon.astro";
 import NextIcon from "./icons/tech/NextIcon.astro";
 import MySQLIcon from "./icons/tech/MySQLIcon.astro";
+import PostgreIcon from "./icons/tech/PostgreIcon.astro";
+import VercelIcon from "./icons/tech/VercelIcon.astro";
 ---
 
 <div class="relative w-full mt-20">
-    <button
-        id="leftBtn"
-        class="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-sm border z-10"
-    >
-        &#8592;
-    </button>
     <div
         id="carousel"
         class="flex overflow-x-auto sm:gap-6 px-2 py-4 scrollbar-hide"
@@ -69,17 +65,19 @@ import MySQLIcon from "./icons/tech/MySQLIcon.astro";
             <MySQLIcon class="size-12" />
             <p class="text-white mt-2 text-sm">MySQL</p>
         </Tech>
+        <Tech class="bg-white/10 border-blue-300">
+            <PostgreIcon class="size-12" />
+            <p class="text-white mt-2 text-sm">PostgreSQL</p>
+        </Tech>
         <Tech class="bg-orange-600/10 border-orange-600">
             <GitIcon class="size-12" />
             <p class="text-white mt-2 text-sm">Git</p>
         </Tech>
+        <Tech class="bg-white/10 border-white">
+            <VercelIcon class="size-12" />
+            <p class="text-white mt-2 text-sm">Vercel</p>
+        </Tech>
     </div>
-    <button
-        id="rightBtn"
-        class="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-sm border z-10"
-    >
-        &#8594;
-    </button>
 </div>
 
 <script type="module" src="/src/scripts/carousel.js"></script>

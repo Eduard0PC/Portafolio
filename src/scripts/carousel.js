@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.getElementById("carousel");
-    const leftBtn = document.getElementById("leftBtn");
-    const rightBtn = document.getElementById("rightBtn");
-
-    const scrollAmount = 150;
 
     let isPaused = false;
 
@@ -20,17 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         carousel.scrollLeft = carousel.scrollWidth / 2;
     };
 
-    if (carousel && leftBtn && rightBtn) {
+    if (carousel) {
         cloneItems();
         initScroll();
 
-        leftBtn.addEventListener("click", () => {
-            carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-        });
-
-        rightBtn.addEventListener("click", () => {
-            carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        });
 
         carousel.addEventListener("scroll", () => {
             if (carousel.scrollLeft <= 0) {

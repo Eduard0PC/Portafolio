@@ -1,7 +1,7 @@
 export const headerTranslations = {
     es: {
         about: 'Sobre mí',
-        experience: 'Experiencia',
+        experience: 'Exp',
         skills: 'Habilidades',
         projects: 'Proyectos',
         contact: 'Contactar',
@@ -9,7 +9,7 @@ export const headerTranslations = {
     },
     en: {
         about: 'About Me',
-        experience: 'Experience',
+        experience: 'Exp',
         skills: 'Skills',
         projects: 'Projects',
         contact: 'Contact',

@@ -9,6 +9,7 @@ export const indexTranslations = {
             closing: ', por lo que siempre estoy en constante aprendizaje.'
         },
         skills: 'Habilidades',
+        proyects: 'Proyectos',
     },
     en: {
         description: 'Web Developer',
@@ -20,5 +21,6 @@ export const indexTranslations = {
             closing: ", so i'm always learning and improving."
         },
         skills: 'Skills',
+        proyects: 'Projects',
     }
 }

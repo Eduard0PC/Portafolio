@@ -3,6 +3,7 @@ import GitHubIcon from "@/components/icons/GitHubIcon.astro";
 import GmailIcon from "@/components/icons/GmailIcon.astro";
 import InstagramIcon from "@/components/icons/InstagramIcon.astro";
 import LetterboxdIcon from "@/components/icons/LetterboxdIcon.astro";
+import Skills from "@/components/Skills.astro";
 import SocialMedia from "@/components/SocialMedia.astro";
 import Layout from "@/layouts/Layout.astro";
 import { indexTranslations } from "@/translations/index.js";
@@ -11,7 +12,7 @@ const t = indexTranslations[lang];
 ---
 
 <Layout
-	title="Portafolio de Eduardo Poot - Desarrollador y programador Web"
+	title="Eduardo Poot - Desarrollador y programador Web"
 	description="Portafolio personal de Eduardo Poot, un desarrollador y programador web con experiencia en tecnologías modernas. Explora mis proyectos, habilidades y más."
 >
 	<main>
@@ -39,14 +40,14 @@ const t = indexTranslations[lang];
 					<LetterboxdIcon class="size-6" />
 					Letterboxd
 				</SocialMedia>
-				<SocialMedia href="https://mail.google.com/">
+				<SocialMedia href="mailto:eduardopoot83@gmail.com">
 					<GmailIcon class="size-6" />
 					eduardopoot83@gmail.com
 				</SocialMedia>
 			</nav>
 			<div class="flex justify-center">
 				<a
-					href="/cv-eduardo.pdf"
+					href="/MiCV.pdf"
 					download
 					class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition block w-fit"
 					aria-label={t.cvButton}
@@ -70,9 +71,7 @@ const t = indexTranslations[lang];
 						<span class="text-yellow-300 font-semibold"
 							>Eduardo Poot</span
 						>{t.about.description}
-						<span class="text-yellow-300"
-							>Backend/Frontend</span
-						>
+						<span class="text-yellow-300">Backend/Frontend</span>
 						{t.about.closing}
 					</p>
 				</div>
@@ -85,9 +84,15 @@ const t = indexTranslations[lang];
 				</div>
 			</div>
 		</section>
-		<section id="skills" class="scroll-mt-28 mt-20 mb-200">
+		<section id="skills" class="scroll-mt-28 mt-20">
 			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
 				{t.skills}
+			</h2>
+			<Skills />
+		</section>
+		<section id="proyects" class="scroll-mt-28 mt-20 mb-200"> 
+			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+				{t.proyects}
 			</h2>
 		</section>
 	</main>

@@ -63,6 +63,37 @@ export const indexTranslations = {
             closing: ", so i'm always learning and improving."
         },
         skills: 'Skills',
-        proyects: 'Projects',
+        proyects: {
+            title: 'Proyectos',
+            list: [
+                {
+                    technologies: [
+                        { name: 'React', icon: ReactIcon, colorBack:'bg-blue-300/10', colorBorder :'border-blue-300'},
+                        { name: 'TS', icon: TsIcon, colorBack:'bg-blue-400/10', colorBorder :'border-blue-400'},
+                        { name: 'Tailwind', icon: TailwindIcon, colorBack:'bg-blue-300/10', colorBorder :'border-blue-300'},
+                        { name: 'Next.js', icon: NextIcon, colorBack:'bg-gray-300/10', colorBorder :'border-gray-300'},
+                        { name: 'PostgreSQL', icon: PostgreIcon, colorBack:'bg-white/10', colorBorder :'border-blue-300'},
+                    ],
+                    title: 'Cveria',
+                    image: 'proyects/cveria.webp',
+                    description: 'AI-powered resume generator.',
+                    codeLink: 'https://github.com/Eduard0PC/Cveria',
+                    previewLink: 'https://cveria.vercel.app/'
+                },
+                {
+                    technologies: [
+                        { name: 'HTML', icon: HtmlIcon, colorBack:'bg-orange-400/10', colorBorder :'border-orange-400'},
+                        { name: 'CSS', icon: CssIcon, colorBack:'bg-blue-500/10', colorBorder :'border-blue-500'},
+                        { name: 'JS', icon: JsIcon, colorBack:'bg-yellow-300/10', colorBorder :'border-yellow-300'},
+                        { name: 'Node.js', icon: NodeIcon, colorBack:'bg-green-300/10', colorBorder :'border-green-300'},
+                        { name: 'MySQL', icon: MySQLIcon, colorBack:'bg-blue-500/10', colorBorder :'border-blue-500'},
+                    ],
+                    title: 'Punto de venta',
+                    image: 'proyects/hanburguesa.webp',
+                    description: "Web platform for managing a restaurant's sales and products.",
+                    codeLink: 'https://github.com/Eduard0PC/HanburguesaPlatform',
+                },
+            ]
+        }
     }
 }

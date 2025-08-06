@@ -1,30 +1,120 @@
 ---
-
+import GitHubIcon from "@/components/icons/GitHubIcon.astro";
+import GmailIcon from "@/components/icons/GmailIcon.astro";
+import InstagramIcon from "@/components/icons/InstagramIcon.astro";
+import LetterboxdIcon from "@/components/icons/LetterboxdIcon.astro";
+import Skills from "@/components/Skills.astro";
+import Proyects from "@/components/Proyects.astro";
+import SocialMedia from "@/components/SocialMedia.astro";
 import Layout from "@/layouts/Layout.astro";
 import { indexTranslations } from "@/translations/index.js";
-
-const lang = 'en';
+const lang = "en";
 const t = indexTranslations[lang];
 ---
 
-<Layout title="Eduardo PC">
+<Layout
+	title="Eduardo Poot - Desarrollador y programador Web"
+	description="Portafolio personal de Eduardo Poot, un desarrollador y programador web con experiencia en tecnologías modernas. Explora mis proyectos, habilidades y más."
+>
 	<main>
-		<p
-			class="text-yellow-400 text-center text-4xl md:text-9xl font-bold mt-16"
-		>
-			<span class="block"> EDUARDO </span>
-			<span class="block"> POOT </span>
-		</p>
-		<p class="text-gray-300 text-xl text-center mt-4">{t.description}</p>
-		<div class="flex justify-center">
-			<a
-				href="/cv-eduardo.pdf"
-				download
-				class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition block w-fit"
-				aria-label={t.cvButton}
+		<section id="home" class="scroll-mt-32 mt-32">
+			<p
+				id="main-name"
+				class="text-yellow-400 text-center text-6xl md:text-9xl font-bold mt-16 transition-all duration-500 opacity-100 translate-y-0"
 			>
-				{t.cvButton}
-			</a>
-		</div>
+				<span class="block"> EDUARDO </span>
+				<span class="block"> POOT </span>
+			</p>
+			<p class="text-gray-300 text-xl text-center mt-4">
+				{t.description}
+			</p>
+			<nav class="flex flex-wrap justify-center gap-4 mt-8 px-4 text-sm">
+				<SocialMedia href="https://github.com/Eduard0PC">
+					<GitHubIcon class="size-6" />
+					GitHub
+				</SocialMedia>
+				<SocialMedia href="https://www.instagram.com/eduard0_poot/">
+					<InstagramIcon class="size-6" />
+					Instagram
+				</SocialMedia>
+				<SocialMedia href="https://letterboxd.com/Edu4rd0_/">
+					<LetterboxdIcon class="size-6" />
+					Letterboxd
+				</SocialMedia>
+				<SocialMedia href="mailto:eduardopoot83@gmail.com">
+					<GmailIcon class="size-6" />
+					eduardopoot83@gmail.com
+				</SocialMedia>
+			</nav>
+			<div class="flex justify-center">
+				<a
+					href="/MiCV.pdf"
+					download
+					class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition block w-fit"
+					aria-label={t.cvButton}
+				>
+					{t.cvButton}
+				</a>
+			</div>
+		</section>
+		<section id="about" class="scroll-mt-28 mt-20">
+			<div
+				class="container mx-auto max-w-[90%] sm:max-w-2xl md:max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 transition-all border border-gray-700 rounded-lg p-8 shadow-lg 
+				bg-gray-900/50 backdrop-blur-md 
+				hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)] 
+				hover:border-white
+				duration-300"
+			>
+				<div class="md:w-1/2 text-center md:text-left md:mx-auto">
+					<h2 class="text-yellow-400 text-4xl font-bold mb-4">
+						{t.about.title}
+					</h2>
+					<p
+						class="text-gray-300 text-lg leading-relaxed tracking-wide"
+					>
+						{t.about.intro}
+						<span class="text-yellow-300 font-semibold"
+							>Eduardo Poot</span
+						>{t.about.description}
+						<span class="text-yellow-300">Backend/Frontend</span>
+						{t.about.closing}
+					</p>
+				</div>
+				<div class="md:w-1/2 flex justify-center">
+					<img
+						src="/me.webp"
+						alt="Eduardo Poot"
+						class="rounded-full size-64 object-cover shadow-lg"
+					/>
+				</div>
+			</div>
+		</section>
+		<section id="skills" class="scroll-mt-28 mt-20">
+			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+				{t.skills}
+			</h2>
+			<Skills />
+		</section>
+		<section id="projects" class="scroll-mt-28 mt-20 mb-10">
+			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+				{t.proyects.title}
+			</h2>
+			<div
+				class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto"
+			>
+				{
+					t.proyects.list.map((project) => (
+						<Proyects
+							technologies={project.technologies}
+							title={project.title}
+							image={project.image}
+							description={project.description}
+							codeLink={project.codeLink}
+							previewLink={project.previewLink}
+						/>
+					))
+				}
+			</div>
+		</section>
 	</main>
 </Layout>

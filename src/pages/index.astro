@@ -20,12 +20,12 @@ const t = indexTranslations[lang];
 		<section id="home" class="scroll-mt-32 mt-32">
 			<p
 				id="main-name"
-				class="text-yellow-400 text-center text-6xl md:text-9xl font-bold mt-16 transition-all duration-500 opacity-100 translate-y-0"
+				class="text-yellow-400 text-center text-6xl md:text-9xl font-bold mt-16 animate-fade-in"
 			>
 				<span class="block"> EDUARDO </span>
 				<span class="block"> POOT </span>
 			</p>
-			<p class="text-gray-300 text-xl text-center mt-4">
+			<p class="text-gray-300 text-xl text-center mt-4 animate-fade-in">
 				{t.description}
 			</p>
 			<nav class="flex flex-wrap justify-center gap-4 mt-8 px-4 text-sm">
@@ -50,7 +50,7 @@ const t = indexTranslations[lang];
 				<a
 					href="/MiCV.pdf"
 					download
-					class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition block w-fit"
+					class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition-transform duration-300 hover:scale-105 animate-slide-up block w-fit"
 					aria-label={t.cvButton}
 				>
 					{t.cvButton}
@@ -59,9 +59,10 @@ const t = indexTranslations[lang];
 		</section>
 		<section id="about" class="scroll-mt-28 mt-20">
 			<div
-				class="container mx-auto max-w-[90%] sm:max-w-2xl md:max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 transition-all border border-gray-700 rounded-lg p-8 shadow-lg 
-				bg-gray-900/50 backdrop-blur-md 
-				hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)] 
+				class="container mx-auto max-w-[90%] sm:max-w-2xl md:max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 transition-all border border-gray-700 rounded-lg p-8 shadow-lg
+				reveal opacity-0
+				bg-gray-900/50 backdrop-blur-md
+				hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
 				hover:border-white
 				duration-300"
 			>
@@ -84,7 +85,7 @@ const t = indexTranslations[lang];
 					<img
 						src="/me.webp"
 						alt="Eduardo Poot"
-						class="rounded-full size-64 object-cover shadow-lg"
+						class="rounded-full size-64 object-cover shadow-lg animate-fade-in"
 					/>
 				</div>
 			</div>
@@ -104,17 +105,39 @@ const t = indexTranslations[lang];
 			>
 				{
 					t.proyects.list.map((project) => (
-						<Proyects
-							technologies={project.technologies}
-							title={project.title}
-							image={project.image}
-							description={project.description}
-							codeLink={project.codeLink}
-							previewLink={project.previewLink}
-						/>
+						<div class="reveal opacity-0">
+							<Proyects
+								technologies={project.technologies}
+								title={project.title}
+								image={project.image}
+								description={project.description}
+								codeLink={project.codeLink}
+								previewLink={project.previewLink}
+							/>
+						</div>
 					))
 				}
 			</div>
 		</section>
 	</main>
 </Layout>
+
+<script>
+	const revealElements = document.querySelectorAll(".reveal");
+
+	const revealOnScroll = () => {
+		const windowHeight = window.innerHeight;
+		revealElements.forEach((el) => {
+			const elementTop = el.getBoundingClientRect().top;
+			const revealPoint = 100;
+
+			if (elementTop < windowHeight - revealPoint) {
+				el.classList.add("animate-slide-up");
+				el.classList.remove("opacity-0");
+			}
+		});
+	};
+
+	window.addEventListener("scroll", revealOnScroll);
+	window.addEventListener("load", revealOnScroll);
+</script>

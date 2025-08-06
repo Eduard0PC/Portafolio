@@ -21,7 +21,7 @@ export const indexTranslations = {
         },
         skills: 'Habilidades',
         proyects: {
-            title: 'Projects',
+            title: 'Proyectos',
             list: [
                 {
                     technologies: [
@@ -64,7 +64,7 @@ export const indexTranslations = {
         },
         skills: 'Skills',
         proyects: {
-            title: 'Proyectos',
+            title: 'Projects',
             list: [
                 {
                     technologies: [

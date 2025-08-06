@@ -3,16 +3,14 @@ export const headerTranslations = {
         about: 'Sobre mí',
         experience: 'Exp',
         skills: 'Habilidades',
+        cert: 'Certificados',
         projects: 'Proyectos',
-        contact: 'Contactar',
-        language: 'Idioma',
     },
     en: {
         about: 'About Me',
         experience: 'Exp',
         skills: 'Skills',
+        cert: 'Certifications',
         projects: 'Projects',
-        contact: 'Contact',
-        language: 'Language',
     },
 };

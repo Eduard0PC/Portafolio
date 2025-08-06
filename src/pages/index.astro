@@ -4,6 +4,7 @@ import GmailIcon from "@/components/icons/GmailIcon.astro";
 import InstagramIcon from "@/components/icons/InstagramIcon.astro";
 import LetterboxdIcon from "@/components/icons/LetterboxdIcon.astro";
 import Skills from "@/components/Skills.astro";
+import Proyects from "@/components/Proyects.astro";
 import SocialMedia from "@/components/SocialMedia.astro";
 import Layout from "@/layouts/Layout.astro";
 import { indexTranslations } from "@/translations/index.js";
@@ -27,7 +28,7 @@ const t = indexTranslations[lang];
 			<p class="text-gray-300 text-xl text-center mt-4">
 				{t.description}
 			</p>
-			<nav class="flex justify-center gap-6 mt-8">
+			<nav class="flex flex-wrap justify-center gap-4 mt-8 px-4 text-sm">
 				<SocialMedia href="https://github.com/Eduard0PC">
 					<GitHubIcon class="size-6" />
 					GitHub
@@ -58,7 +59,11 @@ const t = indexTranslations[lang];
 		</section>
 		<section id="about" class="scroll-mt-28 mt-20">
 			<div
-				class="container mx-auto max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 border border-gray-700 rounded-lg p-8 shadow-lg bg-gray-900/50 backdrop-blur-md"
+				class="container mx-auto max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 transition-all border border-gray-700 rounded-lg p-8 shadow-lg 
+				bg-gray-900/50 backdrop-blur-md 
+				hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)] 
+				hover:border-white
+				duration-300"
 			>
 				<div class="md:w-1/2 text-center md:text-left md:mx-auto">
 					<h2 class="text-yellow-400 text-4xl font-bold mb-4">
@@ -77,9 +82,9 @@ const t = indexTranslations[lang];
 				</div>
 				<div class="md:w-1/2 flex justify-center">
 					<img
-						src="/me.jpg"
+						src="/me.webp"
 						alt="Eduardo Poot"
-						class="rounded-full size-64 object-cover shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_40px_10px_#fde04766]"
+						class="rounded-full size-64 object-cover shadow-lg"
 					/>
 				</div>
 			</div>
@@ -90,10 +95,26 @@ const t = indexTranslations[lang];
 			</h2>
 			<Skills />
 		</section>
-		<section id="proyects" class="scroll-mt-28 mt-20 mb-200"> 
+		<section id="projects" class="scroll-mt-28 mt-20 mb-10">
 			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
-				{t.proyects}
+				{t.proyects.title}
 			</h2>
+			<div
+				class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto"
+			>
+				{
+					t.proyects.list.map((project) => (
+						<Proyects
+							technologies={project.technologies}
+							title={project.title}
+							image={project.image}
+							description={project.description}
+							codeLink={project.codeLink}
+							previewLink={project.previewLink}
+						/>
+					))
+				}
+			</div>
 		</section>
 	</main>
 </Layout>

@@ -86,13 +86,13 @@ export const indexTranslations = {
                     title: 'Hackathon 2024',
                     institution: 'EJAD / Instituto Tecnológico de Mérida',
                     date: 'March 2024',
-                    description: 'Participated in a 36-hour hackathon where my team and I developed a web application that takes photos using voice commands.'
+                    description: 'Participated in a 36-hour hackathon, where my team and I developed a web application that takes photos using voice commands.'
                 },
                 {
                     title: 'Hackathon 2025',
                     institution: 'RODAI / Instituto Tecnológico de Mérida',
                     date: 'April 2025',
-                    description: 'Participated in a 36-hour hackathon where my team and I developed a web application for generating resumes using artificial intelligence.'
+                    description: 'Participated in a 36-hour hackathon, where my team and I developed a web application for generating resumes using artificial intelligence.'
                 }
             ]
         },

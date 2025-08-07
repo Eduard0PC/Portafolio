@@ -8,6 +8,7 @@ import Proyects from "@/components/Proyects.astro";
 import SocialMedia from "@/components/SocialMedia.astro";
 import Layout from "@/layouts/Layout.astro";
 import { indexTranslations } from "@/translations/index.js";
+import Experience from "@/components/Experience.astro";
 const lang = "es";
 const t = indexTranslations[lang];
 ---
@@ -61,7 +62,7 @@ const t = indexTranslations[lang];
 			<div
 				class="container mx-auto max-w-[90%] sm:max-w-2xl md:max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 transition-all border border-gray-700 rounded-lg p-8 shadow-lg
 				reveal opacity-0
-				bg-gray-900/50 backdrop-blur-md
+				bg-blue-950/20 backdrop-blur-md
 				hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
 				hover:border-white
 				active:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
@@ -92,13 +93,34 @@ const t = indexTranslations[lang];
 				</div>
 			</div>
 		</section>
+		<section id="experience" class="scroll-mt-28 mt-20">
+			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+				{t.exp.title}
+			</h2>
+			<ol
+				class="relative border-s mt-5 max-w-sm md:max-w-3xl mx-auto px-4 border-gray-700"
+			>
+				{
+					t.exp.list.map((exp) => (
+						<div class="reveal opacity-0">
+							<Experience
+								title={exp.title}
+								institution={exp.institution}
+								date={exp.date}
+								description={exp.description}
+							/>
+						</div>
+					))
+				}
+			</ol>
+		</section>
 		<section id="skills" class="scroll-mt-28 mt-20">
 			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
 				{t.skills}
 			</h2>
 			<Skills />
 		</section>
-		<section id="projects" class="scroll-mt-28 mt-20 mb-10">
+		<section id="projects" class="scroll-mt-28 mt-20 mb-20">
 			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
 				{t.proyects.title}
 			</h2>

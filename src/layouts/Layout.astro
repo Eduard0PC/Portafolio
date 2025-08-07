@@ -35,21 +35,41 @@ const { title, description, lang } = Astro.props;
                 const headerName = document.getElementById("header-name");
                 const header = document.querySelector("header");
                 if (!mainName || !headerName || !header) return;
+
                 const rect = mainName.getBoundingClientRect();
+
                 if (rect.bottom < 170) {
                     headerName.classList.remove("hidden");
-                    headerName.classList.add("opacity-100", "translate-y-0");
-                    headerName.classList.remove("opacity-0", "-translate-y-4");
+                    setTimeout(() => {
+                        headerName.classList.add(
+                            "opacity-100",
+                            "translate-y-0",
+                        );
+                        headerName.classList.remove(
+                            "opacity-0",
+                            "-translate-y-4",
+                        );
+                    }, 10);
+
                     mainName.classList.add("opacity-0", "-translate-y-4");
                     mainName.classList.remove("opacity-100", "translate-y-0");
+
                     header.classList.add("bg-header-dark");
+
+                    header.classList.remove("py-10");
+                    header.classList.add("py-5");
                 } else {
                     headerName.classList.add("hidden");
                     headerName.classList.remove("opacity-100", "translate-y-0");
                     headerName.classList.add("opacity-0", "-translate-y-4");
+
                     mainName.classList.remove("opacity-0", "-translate-y-4");
                     mainName.classList.add("opacity-100", "translate-y-0");
+
                     header.classList.remove("bg-header-dark");
+
+                    header.classList.remove("py-5");
+                    header.classList.add("py-10");
                 }
             });
         </script>

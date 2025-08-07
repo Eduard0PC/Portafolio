@@ -43,7 +43,7 @@ export const indexTranslations = {
                         { name: 'CSS', icon: CssIcon, colorBack:'bg-blue-500/10', colorBorder :'border-blue-500'},
                         { name: 'JS', icon: JsIcon, colorBack:'bg-yellow-300/10', colorBorder :'border-yellow-300'},
                         { name: 'Node.js', icon: NodeIcon, colorBack:'bg-green-300/10', colorBorder :'border-green-300'},
-                        { name: 'MySQL', icon: MySQLIcon, colorBack:'bg-blue-500/10', colorBorder :'border-blue-500'},
+                        { name: 'MySQL', icon: MySQLIcon, colorBack:'bg-blue-200/10', colorBorder :'border-blue-200'},
                     ],
                     title: 'Punto de venta',
                     image: 'proyects/hanburguesa.webp',

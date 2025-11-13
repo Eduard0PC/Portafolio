@@ -8,6 +8,7 @@ import HtmlIcon from "@/components/icons/tech/HtmlIcon.astro";
 import CssIcon from "@/components/icons/tech/CssIcon.astro";
 import MySQLIcon from "@/components/icons/tech/MySQLIcon.astro";
 import PostgreIcon from "@/components/icons/tech/PostgreIcon.astro";
+import AstroIcon from "@/components/icons/tech/AstroIcon.astro";
 
 export const indexTranslations = {
     es: {
@@ -67,8 +68,35 @@ export const indexTranslations = {
                     description: 'Plataforma web para la gestión de ventas y productos de un restaurante.',
                     codeLink: 'https://github.com/Eduard0PC/HanburguesaPlatform',
                 },
+                {
+                    technologies: [
+                        { name: 'React', icon: ReactIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                        { name: 'JS', icon: JsIcon, colorBack: 'bg-yellow-300/10', colorBorder: 'border-yellow-300' },
+                        { name: 'Tailwind', icon: TailwindIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                        { name: 'Next.js', icon: NextIcon, colorBack: 'bg-gray-300/10', colorBorder: 'border-gray-300' },
+                        { name: 'PostgreSQL', icon: PostgreIcon, colorBack: 'bg-white/10', colorBorder: 'border-blue-300' },
+                    ],
+                    title: 'Aiplify',
+                    image: 'proyects/aiplify.webp',
+                    description: 'Plataforma web para revisar estadisticas de Spotify y obtener recomendaciones de canciones usando inteligencia artificial.',
+                    codeLink: 'https://github.com/Eduard0PC/Aiplify/',
+                    previewLink: 'https://aiplify.vercel.app/'
+                },
+                {
+                    technologies: [
+                        { name: 'Astro', icon: AstroIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-300' },
+                        { name: 'JS', icon: JsIcon, colorBack: 'bg-yellow-300/10', colorBorder: 'border-yellow-300' },
+                        { name: 'Tailwind', icon: TailwindIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                    ],
+                    title: 'Portafolio',
+                    image: 'proyects/portafolio.webp',
+                    description: 'Portafolio Personal',
+                    codeLink: 'https://github.com/Eduard0PC/Portafolio',
+                    previewLink: 'https://eduardopoot.vercel.app/'
+                },
             ]
-        }
+        },
+        more: 'Ver más en mi GitHub',
     },
     en: {
         description: 'Web Developer',
@@ -127,7 +155,34 @@ export const indexTranslations = {
                     description: "Web platform for managing a restaurant's sales and products.",
                     codeLink: 'https://github.com/Eduard0PC/HanburguesaPlatform',
                 },
+                {
+                    technologies: [
+                        { name: 'React', icon: ReactIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                        { name: 'JS', icon: JsIcon, colorBack: 'bg-yellow-300/10', colorBorder: 'border-yellow-300' },
+                        { name: 'Tailwind', icon: TailwindIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                        { name: 'Next.js', icon: NextIcon, colorBack: 'bg-gray-300/10', colorBorder: 'border-gray-300' },
+                        { name: 'PostgreSQL', icon: PostgreIcon, colorBack: 'bg-white/10', colorBorder: 'border-blue-300' },
+                    ],
+                    title: 'Aiplify',
+                    image: 'proyects/aiplify.webp',
+                    description: 'Web platform to review Spotify statistics and get song recommendations using artificial intelligence.',
+                    codeLink: 'https://github.com/Eduard0PC/Aiplify/',
+                    previewLink: 'https://aiplify.vercel.app/'
+                },
+                {
+                    technologies: [
+                        { name: 'Astro', icon: AstroIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-300' },
+                        { name: 'JS', icon: JsIcon, colorBack: 'bg-yellow-300/10', colorBorder: 'border-yellow-300' },
+                        { name: 'Tailwind', icon: TailwindIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                    ],
+                    title: 'Portfolio',
+                    image: 'proyects/portafolio.webp',
+                    description: 'Personal Portfolio',
+                    codeLink: 'https://github.com/Eduard0PC/Portafolio',
+                    previewLink: 'https://eduardopoot.vercel.app/'
+                },
             ]
-        }
+        },
+        more: 'See more on my GitHub',
     }
 }

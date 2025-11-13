@@ -73,13 +73,11 @@ const t = indexTranslations[lang];
 					<h2 class="text-yellow-400 text-4xl font-bold mb-4">
 						{t.about.title}
 					</h2>
-					<p
-						class="text-gray-300 text-lg leading-relaxed tracking-wide"
-					>
+					<p class="text-gray-300 text-lg leading-relaxed tracking-wide">
 						{t.about.intro}
-						<span class="text-yellow-300 font-semibold"
-							>Eduardo Poot</span
-						>{t.about.description}
+						<span class="text-yellow-300 font-semibold">Eduardo Poot</span>{
+							t.about.description
+						}
 						<span class="text-yellow-300">Backend/Frontend</span>
 						{t.about.closing}
 					</p>
@@ -98,7 +96,7 @@ const t = indexTranslations[lang];
 				{t.exp.title}
 			</h2>
 			<ol
-				class="relative border-s mt-5 max-w-sm md:max-w-3xl mx-auto px-4 border-gray-700"
+				class="relative border-s mt-10 max-w-xs md:max-w-3xl mx-auto px-4 border-gray-700"
 			>
 				{
 					t.exp.list.map((exp) => (
@@ -124,9 +122,7 @@ const t = indexTranslations[lang];
 			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
 				{t.proyects.title}
 			</h2>
-			<div
-				class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto"
-			>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
 				{
 					t.proyects.list.map((project) => (
 						<div class="reveal opacity-0">
@@ -141,6 +137,24 @@ const t = indexTranslations[lang];
 						</div>
 					))
 				}
+				<div class="reveal opacity-0 sm:col-span-2">
+					<a
+						href="https://github.com/Eduard0PC?tab=repositories"
+						target="_blank"
+						class="group block w-full border
+      		border-gray-700 rounded-md overflow-hidden bg-gray-900/50 backdrop-blur-md
+      			transition-all duration-300 shadow-md
+      		hover:border-white mt-10 hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
+      		active:border-white active:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
+      			text-center py-5"
+					>
+						<span
+							class="text-yellow-200 text-2xl font-semibold group-hover:text-white transition"
+						>
+							{t.more}
+						</span>
+					</a>
+				</div>
 			</div>
 		</section>
 	</main>

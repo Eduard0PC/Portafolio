@@ -1,0 +1,33 @@
+<div
+  id="certificate-modal"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+>
+  <div class="relative max-w-5xl w-full max-h-[95vh] flex flex-col items-center">
+    <button
+      id="close-modal"
+      class="absolute top-4 right-4 text-white hover:text-yellow-400 transition-colors duration-200 text-5xl font-bold z-10 w-12 h-12 flex items-center justify-center cursor-pointer"
+      aria-label="Cerrar modal"
+    >
+      &times;
+    </button>
+    
+    <div class="relative w-full flex-1 flex items-center justify-center overflow-auto">
+      <img
+        id="modal-image"
+        src=""
+        alt="Certificado"
+        class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+      />
+    </div>
+
+    <h3
+      id="modal-title"
+      class="text-2xl font-semibold mt-4 text-center text-yellow-200"
+    ></h3>
+  </div>
+</div>
+
+

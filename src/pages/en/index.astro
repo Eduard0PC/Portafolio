@@ -9,6 +9,9 @@ import SocialMedia from "@/components/SocialMedia.astro";
 import Layout from "@/layouts/Layout.astro";
 import { indexTranslations } from "@/translations/index.js";
 import Experience from "@/components/Experience.astro";
+import LinkedinIcon from "@/components/icons/LinkedinIcon.astro";
+import Certifications from "@/components/Certifications.astro";
+import CertificateModal from "@/components/CertificateModal.astro";
 const lang = "en";
 const t = indexTranslations[lang];
 ---
@@ -38,9 +41,9 @@ const t = indexTranslations[lang];
 					<InstagramIcon class="size-6" />
 					Instagram
 				</SocialMedia>
-				<SocialMedia href="https://letterboxd.com/Edu4rd0_/">
-					<LetterboxdIcon class="size-6" />
-					Letterboxd
+				<SocialMedia href="https://www.linkedin.com/in/eduard0pc/">
+					<LinkedinIcon class="size-6" />
+					Linkedin
 				</SocialMedia>
 				<SocialMedia href="mailto:eduardopoot83@gmail.com">
 					<GmailIcon class="size-6" />
@@ -49,7 +52,7 @@ const t = indexTranslations[lang];
 			</nav>
 			<div class="flex justify-center">
 				<a
-					href="/MiCV.pdf"
+					href="/CV_PootEduardo.pdf"
 					download
 					class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition-transform duration-300 hover:scale-105 animate-slide-up block w-fit"
 					aria-label={t.cvButton}
@@ -118,6 +121,24 @@ const t = indexTranslations[lang];
 			</h2>
 			<Skills />
 		</section>
+		<section id="certification" class="scroll-mt-28 mt-20 mb-20">
+			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+				{t.certifications.title}
+			</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+				{
+					t.certifications.list.map((certification) => (
+						<div class="reveal opacity-0">
+							<Certifications
+								title={certification.title}
+								image={certification.image}
+								description={certification.description}
+							/>
+						</div>
+					))
+				}
+			</div>
+		</section>
 		<section id="projects" class="scroll-mt-28 mt-20 mb-20">
 			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
 				{t.proyects.title}
@@ -158,6 +179,7 @@ const t = indexTranslations[lang];
 			</div>
 		</section>
 	</main>
+	<CertificateModal />
 </Layout>
 
 <script>
@@ -178,4 +200,73 @@ const t = indexTranslations[lang];
 
 	window.addEventListener("scroll", revealOnScroll);
 	window.addEventListener("load", revealOnScroll);
+
+	// Funcionalidad del modal de certificados
+	function openCertificateModal(imageSrc: string, title: string) {
+		const modal = document.getElementById("certificate-modal");
+		const modalImage = document.getElementById("modal-image") as HTMLImageElement;
+		const modalTitle = document.getElementById("modal-title");
+
+		if (modal && modalImage && modalTitle) {
+			modalImage.src = imageSrc;
+			modalImage.alt = title;
+			modalTitle.textContent = title;
+			modal.classList.remove("hidden");
+			modal.classList.add("flex");
+			document.body.style.overflow = "hidden";
+		}
+	}
+
+	function closeCertificateModal() {
+		const modal = document.getElementById("certificate-modal");
+		if (modal) {
+			modal.classList.add("hidden");
+			modal.classList.remove("flex");
+			document.body.style.overflow = "";
+		}
+	}
+
+	// Inicializar modal de certificados
+	function initCertificateModal() {
+		const certificationCards = document.querySelectorAll(".certification-card");
+		certificationCards.forEach((card) => {
+			card.addEventListener("click", () => {
+				const imageSrc = card.getAttribute("data-cert-image");
+				const title = card.getAttribute("data-cert-title");
+				if (imageSrc && title) {
+					openCertificateModal(imageSrc, title);
+				}
+			});
+		});
+
+		const closeButton = document.getElementById("close-modal");
+		if (closeButton) {
+			closeButton.addEventListener("click", closeCertificateModal);
+		}
+
+		const modal = document.getElementById("certificate-modal");
+		if (modal) {
+			modal.addEventListener("click", (e) => {
+				if (e.target === modal) {
+					closeCertificateModal();
+				}
+			});
+		}
+
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape") {
+				const modal = document.getElementById("certificate-modal");
+				if (modal && !modal.classList.contains("hidden")) {
+					closeCertificateModal();
+				}
+			}
+		});
+	}
+
+	// Inicializar cuando el DOM esté listo
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", initCertificateModal);
+	} else {
+		initCertificateModal();
+	}
 </script>

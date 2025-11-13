@@ -38,6 +38,16 @@ export const indexTranslations = {
             ]
         },
         skills: 'Habilidades',
+        certifications: {
+            title: 'Certificaciones',
+            list: [
+                {
+                    title: 'Python Essentials 1',
+                    image: 'certifications/Python_Cisco.webp',
+                    description: 'Certificación de Python Essentials 1 de Cisco Networking Academy.',
+                },
+            ]
+        },
         proyects: {
             title: 'Proyectos',
             list: [
@@ -125,6 +135,16 @@ export const indexTranslations = {
             ]
         },
         skills: 'Skills',
+        certifications: {
+            title: 'Certifications',
+            list: [
+                {
+                    title: 'Python Essentials 1',
+                    image: 'certifications/Python_Cisco.webp',
+                    description: 'Python Essentials 1 certification from Cisco Networking Academy.',
+                },
+            ]
+        },
         proyects: {
             title: 'Projects',
             list: [

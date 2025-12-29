@@ -9,6 +9,7 @@ import CssIcon from "@/components/icons/tech/CssIcon.astro";
 import MySQLIcon from "@/components/icons/tech/MySQLIcon.astro";
 import PostgreIcon from "@/components/icons/tech/PostgreIcon.astro";
 import AstroIcon from "@/components/icons/tech/AstroIcon.astro";
+import PhpIcon from "@/components/icons/tech/PhpIcon.astro";
 
 export const indexTranslations = {
     es: {
@@ -65,6 +66,7 @@ export const indexTranslations = {
                     codeLink: 'https://github.com/Eduard0PC/Cveria',
                     previewLink: 'https://cveria.vercel.app/'
                 },
+                /*
                 {
                     technologies: [
                         { name: 'HTML', icon: HtmlIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-400' },
@@ -77,6 +79,21 @@ export const indexTranslations = {
                     image: 'proyects/hanburguesa.webp',
                     description: 'Plataforma web para la gestión de ventas y productos de un restaurante.',
                     codeLink: 'https://github.com/Eduard0PC/HanburguesaPlatform',
+                },
+                */
+                {
+                    technologies: [
+                        { name: 'HTML', icon: HtmlIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-400' },
+                        { name: 'CSS', icon: CssIcon, colorBack: 'bg-blue-500/10', colorBorder: 'border-blue-500' },
+                        { name: 'JS', icon: JsIcon, colorBack: 'bg-yellow-300/10', colorBorder: 'border-yellow-300' },
+                        { name: 'PHP', icon: PhpIcon, colorBack: 'bg-purple-300/10', colorBorder: 'border-purple-300' },
+                        { name: 'MySQL', icon: MySQLIcon, colorBack: 'bg-blue-200/10', colorBorder: 'border-blue-200' },
+                    ],
+                    title: 'Enloyados',
+                    image: 'proyects/enloyados.webp',
+                    description: 'Página web diseñada para un restaurante de sushi, donde se presentan sus platillos, información del negocio y opciones de contacto para los clientes.',
+                    codeLink: 'https://github.com/Eduard0PC/Enloyados-Sushi',
+                    previewLink: 'https://enloyados.wuaze.com/'
                 },
                 {
                     technologies: [
@@ -100,7 +117,7 @@ export const indexTranslations = {
                     ],
                     title: 'Portafolio',
                     image: 'proyects/portafolio.webp',
-                    description: 'Portafolio Personal',
+                    description: 'Portafolio personal en donde muestro mis proyectos y habilidades.',
                     codeLink: 'https://github.com/Eduard0PC/Portafolio',
                     previewLink: 'https://eduardopoot.vercel.app/'
                 },
@@ -162,6 +179,7 @@ export const indexTranslations = {
                     codeLink: 'https://github.com/Eduard0PC/Cveria',
                     previewLink: 'https://cveria.vercel.app/'
                 },
+                /*
                 {
                     technologies: [
                         { name: 'HTML', icon: HtmlIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-400' },
@@ -174,6 +192,21 @@ export const indexTranslations = {
                     image: 'proyects/hanburguesa.webp',
                     description: "Web platform for managing a restaurant's sales and products.",
                     codeLink: 'https://github.com/Eduard0PC/HanburguesaPlatform',
+                },
+                */
+                {
+                    technologies: [
+                        { name: 'HTML', icon: HtmlIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-400' },
+                        { name: 'CSS', icon: CssIcon, colorBack: 'bg-blue-500/10', colorBorder: 'border-blue-500' },
+                        { name: 'JS', icon: JsIcon, colorBack: 'bg-yellow-300/10', colorBorder: 'border-yellow-300' },
+                        { name: 'PHP', icon: PhpIcon, colorBack: 'bg-purple-300/10', colorBorder: 'border-purple-300' },
+                        { name: 'MySQL', icon: MySQLIcon, colorBack: 'bg-blue-200/10', colorBorder: 'border-blue-200' },
+                    ],
+                    title: 'Enloyados',
+                    image: 'proyects/enloyados.webp',
+                    description: 'Website designed for a sushi restaurant, showcasing their dishes, business information, and contact options for customers.',
+                    codeLink: 'https://github.com/Eduard0PC/Enloyados-Sushi',
+                    previewLink: 'https://enloyados.wuaze.com/'
                 },
                 {
                     technologies: [
@@ -197,7 +230,7 @@ export const indexTranslations = {
                     ],
                     title: 'Portfolio',
                     image: 'proyects/portafolio.webp',
-                    description: 'Personal Portfolio',
+                    description: 'Personal portfolio showcasing my projects and skills.',
                     codeLink: 'https://github.com/Eduard0PC/Portafolio',
                     previewLink: 'https://eduardopoot.vercel.app/'
                 },

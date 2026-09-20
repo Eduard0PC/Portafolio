@@ -38,6 +38,7 @@ export const projectsTranslations = {
                 technologies: [
                     { name: 'Flutter', icon: FlutterIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
                     { name: 'C#', icon: CSharpIcon, colorBack: 'bg-purple-500/10', colorBorder: 'border-purple-500' },
+                    { name: 'PostgreSQL', icon: PostgreIcon, colorBack: 'bg-white/10', colorBorder: 'border-blue-300' },
                 ],
                 title: 'MediApp',
                 image: 'proyects/mediapp.webp',
@@ -152,6 +153,7 @@ export const projectsTranslations = {
                 technologies: [
                     { name: 'Flutter', icon: FlutterIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
                     { name: 'C#', icon: CSharpIcon, colorBack: 'bg-purple-500/10', colorBorder: 'border-purple-500' },
+                    { name: 'PostgreSQL', icon: PostgreIcon, colorBack: 'bg-white/10', colorBorder: 'border-blue-300' },
                 ],
                 title: 'MediApp',
                 image: 'proyects/mediapp.webp',
@@ -160,7 +162,7 @@ export const projectsTranslations = {
             },
             {
                 technologies: [
-                    { name: 'Java', icon: JavaIcon, colorBack: 'bg-red-500/10', colorBorder: 'border-red-500' }
+                    { name: 'Java', icon: JavaIcon, colorBack: 'bg-red-500/10', colorBorder: 'border-red-500' },
                 ],
                 title: 'SPACLES',
                 image: 'proyects/spacles.webp',

@@ -17,53 +17,49 @@ const t = indexTranslations[lang];
 ---
 
 <Layout
-	title="Eduardo Poot - Desarrollador y programador Web"
-	description="Portafolio personal de Eduardo Poot, un desarrollador y programador web con experiencia en tecnologías modernas. Explora mis proyectos, habilidades y más."
+  title="Eduardo Poot - Desarrollador y programador Web"
+  description="Portafolio personal de Eduardo Poot, un desarrollador y programador web con experiencia en tecnologías modernas. Explora mis proyectos, habilidades y más."
 >
-	<main>
-		<section id="home" class="scroll-mt-32 mt-32">
-			<p
-				id="main-name"
-				class="text-yellow-400 text-center text-6xl md:text-9xl font-bold mt-16 transition-all duration-500 opacity-100 translate-y-0"
-			>
-				<span class="block"> EDUARDO </span>
-				<span class="block"> POOT </span>
-			</p>
-			<p class="text-gray-300 text-xl text-center mt-4 animate-fade-in">
-				{t.description}
-			</p>
-			<nav class="flex flex-wrap justify-center gap-4 mt-8 px-4 text-sm">
-				<SocialMedia href="https://github.com/Eduard0PC">
-					<GitHubIcon class="size-6" />
-					GitHub
-				</SocialMedia>
-				<SocialMedia href="https://www.instagram.com/eduard0_poot/">
-					<InstagramIcon class="size-6" />
-					Instagram
-				</SocialMedia>
-				<SocialMedia href="https://www.linkedin.com/in/eduard0pc/">
-					<LinkedinIcon class="size-6" />
-					Linkedin
-				</SocialMedia>
-				<SocialMedia href="mailto:eduardopoot83@gmail.com">
-					<GmailIcon class="size-6" />
-					eduardopoot83@gmail.com
-				</SocialMedia>
-			</nav>
-			<div class="flex justify-center">
-				<a
-					href="/CV_PootEduardo.pdf"
-					download
-					class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition-transform duration-300 hover:scale-105 animate-slide-up block w-fit"
-					aria-label={t.cvButton}
-				>
-					{t.cvButton}
-				</a>
-			</div>
-		</section>
-		<section id="about" class="scroll-mt-28 mt-20">
-			<div
-				class="container mx-auto max-w-[90%] sm:max-w-2xl md:max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 transition-all border border-gray-700 rounded-lg p-8 shadow-lg
+  <main>
+    <section id="home" class="scroll-mt-32 mt-32">
+      <p
+        id="main-name"
+        class="text-yellow-400 text-center text-6xl md:text-9xl font-bold mt-16 transition-all duration-500 opacity-100 translate-y-0"
+      >
+        <span class="block"> EDUARDO </span>
+        <span class="block"> POOT </span>
+      </p>
+      <p class="text-gray-300 text-xl text-center mt-4 animate-fade-in">
+        {t.description}
+      </p>
+      <nav class="flex flex-wrap justify-center gap-4 mt-8 px-4 text-sm">
+        <SocialMedia href="https://github.com/Eduard0PC">
+          <GitHubIcon class="size-6" />
+          GitHub
+        </SocialMedia>
+        <SocialMedia href="https://www.linkedin.com/in/eduard0pc/">
+          <LinkedinIcon class="size-6" />
+          Linkedin
+        </SocialMedia>
+        <SocialMedia href="mailto:eduardopoot.work@gmail.com">
+          <GmailIcon class="size-6" />
+          eduardopoot.work@gmail.com
+        </SocialMedia>
+      </nav>
+      <div class="flex justify-center">
+        <a
+          href="/CV_PootEduardo.pdf"
+          download
+          class="mt-8 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition-transform duration-300 hover:scale-105 animate-slide-up block w-fit"
+          aria-label={t.cvButton}
+        >
+          {t.cvButton}
+        </a>
+      </div>
+    </section>
+    <section id="about" class="scroll-mt-28 mt-20">
+      <div
+        class="container mx-auto max-w-[90%] sm:max-w-2xl md:max-w-4xl px-6 flex flex-col-reverse md:flex-row items-center gap-12 transition-all border border-gray-700 rounded-lg p-8 shadow-lg
 				reveal opacity-0
 				bg-blue-950/20 backdrop-blur-md
 				hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
@@ -71,201 +67,203 @@ const t = indexTranslations[lang];
 				active:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
 				active:border-white
 				duration-300"
-			>
-				<div class="md:w-1/2 text-center md:text-left md:mx-auto">
-					<h2 class="text-yellow-400 text-4xl font-bold mb-4">
-						{t.about.title}
-					</h2>
-					<p class="text-gray-300 text-lg leading-relaxed tracking-wide">
-						{t.about.intro}
-						<span class="text-yellow-300 font-semibold">Eduardo Poot</span>{
-							t.about.description
-						}
-						<span class="text-yellow-300">Backend/Frontend</span>
-						{t.about.closing}
-					</p>
-				</div>
-				<div class="md:w-1/2 flex justify-center">
-					<img
-						src="/me.webp"
-						alt="Eduardo Poot"
-						class="rounded-full size-64 object-cover shadow-lg animate-fade-in"
-					/>
-				</div>
-			</div>
-		</section>
-		<section id="experience" class="scroll-mt-28 mt-20">
-			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
-				{t.exp.title}
-			</h2>
-			<ol
-				class="relative border-s mt-10 max-w-xs md:max-w-3xl mx-auto px-4 border-gray-700"
-			>
-				{
-					t.exp.list.map((exp) => (
-						<div class="reveal opacity-0">
-							<Experience
-								title={exp.title}
-								institution={exp.institution}
-								date={exp.date}
-								description={exp.description}
-							/>
-						</div>
-					))
-				}
-			</ol>
-		</section>
-		<section id="skills" class="scroll-mt-28 mt-20">
-			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
-				{t.skills}
-			</h2>
-			<Skills />
-		</section>
-		<section id="certification" class="scroll-mt-28 mt-20 mb-20">
-			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
-				{t.certifications.title}
-			</h2>
-			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
-				{
-					t.certifications.list.map((certification) => (
-						<div class="reveal opacity-0">
-							<Certifications
-								title={certification.title}
-								image={certification.image}
-								description={certification.description}
-							/>
-						</div>
-					))
-				}
-			</div>
-		</section>
-		<section id="projects" class="scroll-mt-28 mt-20 mb-20">
-			<h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
-				{t.proyects.title}
-			</h2>
-			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
-				{
-					t.proyects.list.map((project) => (
-						<div class="reveal opacity-0">
-							<Proyects
-								technologies={project.technologies}
-								title={project.title}
-								image={project.image}
-								description={project.description}
-								codeLink={project.codeLink}
-								previewLink={project.previewLink}
-							/>
-						</div>
-					))
-				}
-				<div class="reveal opacity-0 sm:col-span-2">
-					<a
-						href="https://github.com/Eduard0PC?tab=repositories"
-						target="_blank"
-						class="group block w-full border
+      >
+        <div class="md:w-1/2 text-center md:text-left md:mx-auto">
+          <h2 class="text-yellow-400 text-4xl font-bold mb-4">
+            {t.about.title}
+          </h2>
+          <p class="text-gray-300 text-lg leading-relaxed tracking-wide">
+            {t.about.intro}
+            <span class="text-yellow-300 font-semibold">Eduardo Poot</span>{
+              t.about.description
+            }
+            <span class="text-yellow-300">Backend/Frontend</span>
+            {t.about.closing}
+          </p>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img
+            src="/me.webp"
+            alt="Eduardo Poot"
+            class="rounded-full size-64 object-cover shadow-lg animate-fade-in"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="scroll-mt-28 mt-20">
+      <h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+        {t.exp.title}
+      </h2>
+      <ol
+        class="relative border-s mt-10 max-w-xs md:max-w-3xl mx-auto px-4 border-gray-700"
+      >
+        {
+          t.exp.list.map((exp) => (
+            <div class="reveal opacity-0">
+              <Experience
+                title={exp.title}
+                institution={exp.institution}
+                date={exp.date}
+                description={exp.description}
+              />
+            </div>
+          ))
+        }
+      </ol>
+    </section>
+    <section id="skills" class="scroll-mt-28 mt-20">
+      <h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+        {t.skills}
+      </h2>
+      <Skills />
+    </section>
+    <section id="certification" class="scroll-mt-28 mt-20 mb-20">
+      <h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+        {t.certifications.title}
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {
+          t.certifications.list.map((certification) => (
+            <div class="reveal opacity-0">
+              <Certifications
+                title={certification.title}
+                image={certification.image}
+                description={certification.description}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+    <section id="projects" class="scroll-mt-28 mt-20 mb-20">
+      <h2 class="text-yellow-400 text-center text-4xl font-bold mb-4">
+        {t.proyects.title}
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {
+          t.proyects.list.map((project) => (
+            <div class="reveal opacity-0">
+              <Proyects
+                technologies={project.technologies}
+                title={project.title}
+                image={project.image}
+                description={project.description}
+                codeLink={project.codeLink}
+                previewLink={project.previewLink}
+              />
+            </div>
+          ))
+        }
+        <div class="reveal opacity-0 sm:col-span-2">
+          <a
+            href="https://github.com/Eduard0PC?tab=repositories"
+            target="_blank"
+            class="group block w-full border
       		border-gray-700 rounded-md overflow-hidden bg-gray-900/50 backdrop-blur-md
       			transition-all duration-300 shadow-md
       		hover:border-white mt-10 hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
       		active:border-white active:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)]
       			text-center py-5"
-					>
-						<span
-							class="text-yellow-200 text-2xl font-semibold group-hover:text-white transition"
-						>
-							{t.more}
-						</span>
-					</a>
-				</div>
-			</div>
-		</section>
-	</main>
-	<CertificateModal />
+          >
+            <span
+              class="text-yellow-200 text-2xl font-semibold group-hover:text-white transition"
+            >
+              {t.more}
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <CertificateModal />
 </Layout>
 
 <script>
-	const revealElements = document.querySelectorAll(".reveal");
+  const revealElements = document.querySelectorAll(".reveal");
 
-	const revealOnScroll = () => {
-		const windowHeight = window.innerHeight;
-		revealElements.forEach((el) => {
-			const elementTop = el.getBoundingClientRect().top;
-			const revealPoint = 100;
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach((el) => {
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 100;
 
-			if (elementTop < windowHeight - revealPoint) {
-				el.classList.add("animate-slide-up");
-				el.classList.remove("opacity-0");
-			}
-		});
-	};
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("animate-slide-up");
+        el.classList.remove("opacity-0");
+      }
+    });
+  };
 
-	window.addEventListener("scroll", revealOnScroll);
-	window.addEventListener("load", revealOnScroll);
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
 
-	// Funcionalidad del modal de certificados
-	function openCertificateModal(imageSrc: string, title: string) {
-		const modal = document.getElementById("certificate-modal");
-		const modalImage = document.getElementById("modal-image") as HTMLImageElement;
-		const modalTitle = document.getElementById("modal-title");
+  // Funcionalidad del modal de certificados
+  function openCertificateModal(imageSrc: string, title: string) {
+    const modal = document.getElementById("certificate-modal");
+    const modalImage = document.getElementById(
+      "modal-image",
+    ) as HTMLImageElement;
+    const modalTitle = document.getElementById("modal-title");
 
-		if (modal && modalImage && modalTitle) {
-			modalImage.src = imageSrc;
-			modalImage.alt = title;
-			modalTitle.textContent = title;
-			modal.classList.remove("hidden");
-			modal.classList.add("flex");
-			document.body.style.overflow = "hidden";
-		}
-	}
+    if (modal && modalImage && modalTitle) {
+      modalImage.src = imageSrc;
+      modalImage.alt = title;
+      modalTitle.textContent = title;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+  }
 
-	function closeCertificateModal() {
-		const modal = document.getElementById("certificate-modal");
-		if (modal) {
-			modal.classList.add("hidden");
-			modal.classList.remove("flex");
-			document.body.style.overflow = "";
-		}
-	}
+  function closeCertificateModal() {
+    const modal = document.getElementById("certificate-modal");
+    if (modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "";
+    }
+  }
 
-	// Inicializar modal de certificados
-	function initCertificateModal() {
-		const certificationCards = document.querySelectorAll(".certification-card");
-		certificationCards.forEach((card) => {
-			card.addEventListener("click", () => {
-				const imageSrc = card.getAttribute("data-cert-image");
-				const title = card.getAttribute("data-cert-title");
-				if (imageSrc && title) {
-					openCertificateModal(imageSrc, title);
-				}
-			});
-		});
+  // Inicializar modal de certificados
+  function initCertificateModal() {
+    const certificationCards = document.querySelectorAll(".certification-card");
+    certificationCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const imageSrc = card.getAttribute("data-cert-image");
+        const title = card.getAttribute("data-cert-title");
+        if (imageSrc && title) {
+          openCertificateModal(imageSrc, title);
+        }
+      });
+    });
 
-		const closeButton = document.getElementById("close-modal");
-		if (closeButton) {
-			closeButton.addEventListener("click", closeCertificateModal);
-		}
+    const closeButton = document.getElementById("close-modal");
+    if (closeButton) {
+      closeButton.addEventListener("click", closeCertificateModal);
+    }
 
-		const modal = document.getElementById("certificate-modal");
-		if (modal) {
-			modal.addEventListener("click", (e) => {
-				if (e.target === modal) {
-					closeCertificateModal();
-				}
-			});
-		}
+    const modal = document.getElementById("certificate-modal");
+    if (modal) {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeCertificateModal();
+        }
+      });
+    }
 
-		document.addEventListener("keydown", (e) => {
-			if (e.key === "Escape") {
-				const modal = document.getElementById("certificate-modal");
-				if (modal && !modal.classList.contains("hidden")) {
-					closeCertificateModal();
-				}
-			}
-		});
-	}
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        const modal = document.getElementById("certificate-modal");
+        if (modal && !modal.classList.contains("hidden")) {
+          closeCertificateModal();
+        }
+      }
+    });
+  }
 
-	if (document.readyState === "loading") {
-		document.addEventListener("DOMContentLoaded", initCertificateModal);
-	} else {
-		initCertificateModal();
-	}
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCertificateModal);
+  } else {
+    initCertificateModal();
+  }
 </script>

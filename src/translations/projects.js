@@ -10,6 +10,11 @@ import MySQLIcon from "@/components/icons/tech/MySQLIcon.astro";
 import PostgreIcon from "@/components/icons/tech/PostgreIcon.astro";
 import AstroIcon from "@/components/icons/tech/AstroIcon.astro";
 import PhpIcon from "@/components/icons/tech/PhpIcon.astro";
+import AngularIcon from "@/components/icons/tech/AngularIcon.astro";
+import BootstrapIcon from "@/components/icons/tech/BootstrapIcon.astro";
+import FlutterIcon from "@/components/icons/tech/FlutterIcon.astro";
+import CSharpIcon from "@/components/icons/tech/CSharpIcon.astro";
+import JavaIcon from "@/components/icons/tech/JavaIcon.astro";
 
 export const projectsTranslations = {
     es: {
@@ -29,7 +34,26 @@ export const projectsTranslations = {
                 codeLink: 'https://github.com/Eduard0PC/Cveria',
                 previewLink: 'https://cveria.vercel.app/'
             },
-            /*
+            {
+                technologies: [
+                    { name: 'Flutter', icon: FlutterIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                    { name: 'C#', icon: CSharpIcon, colorBack: 'bg-purple-500/10', colorBorder: 'border-purple-500' },
+                ],
+                title: 'MediApp',
+                image: 'proyects/mediapp.webp',
+                description: 'Aplicación móvil para la gestión de citas médicas del paciente y la administración de citas médicas del doctor.',
+                codeLink: 'https://github.com/Eduard0PC/App-PortalMedico',
+
+            },
+            {
+                technologies: [
+                    { name: 'Java', icon: JavaIcon, colorBack: 'bg-red-500/10', colorBorder: 'border-red-500' },
+                ],
+                title: 'SPACLES',
+                image: 'proyects/spacles.webp',
+                description: 'Videojuego de naves espaciales desarrollado en Java, donde el jugador deberá esquivar ataques y disparar a Cthulhu para derrotarlo.',
+                codeLink: 'https://github.com/Eduard0PC/SPACLES',
+            },
             {
                 technologies: [
                     { name: 'HTML', icon: HtmlIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-400' },
@@ -43,7 +67,6 @@ export const projectsTranslations = {
                 description: 'Plataforma web para la gestión de ventas y productos de un restaurante.',
                 codeLink: 'https://github.com/Eduard0PC/HanburguesaPlatform',
             },
-            */
             {
                 technologies: [
                     { name: 'HTML', icon: HtmlIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-400' },
@@ -74,6 +97,28 @@ export const projectsTranslations = {
             },
             {
                 technologies: [
+                    { name: 'Angular', icon: AngularIcon, colorBack: 'bg-red-300/10', colorBorder: 'border-red-300' },
+                    { name: 'TS', icon: TsIcon, colorBack: 'bg-blue-400/10', colorBorder: 'border-blue-400' },
+                    { name: 'Bootstrap', icon: BootstrapIcon, colorBack: 'bg-purple-300/10', colorBorder: 'border-purple-300' },
+                ],
+                title: 'MusicSearch',
+                image: 'proyects/musicsearch.webp',
+                description: 'Aplicación web para buscar canciones y artistas usando la API de Deezer.',
+                codeLink: 'https://github.com/Eduard0PC/MusicSearch',
+                previewLink: 'https://music-search-lab.vercel.app/'
+            },
+            {
+                technologies: [
+                    { name: 'Flutter', icon: FlutterIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                ],
+                title: 'Music Test App',
+                image: 'proyects/musictestapp.webp',
+                description: 'Aplicación móvil para busqueda de canciones y realizar pruebas unitarias en Flutter.',
+                codeLink: 'https://github.com/Eduard0PC/Music-TestApp',
+            }
+            /*
+            {
+                technologies: [
                     { name: 'Astro', icon: AstroIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-300' },
                     { name: 'JS', icon: JsIcon, colorBack: 'bg-yellow-300/10', colorBorder: 'border-yellow-300' },
                     { name: 'Tailwind', icon: TailwindIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
@@ -83,7 +128,7 @@ export const projectsTranslations = {
                 description: 'Portafolio personal en donde muestro mis proyectos y habilidades.',
                 codeLink: 'https://github.com/Eduard0PC/Portafolio',
                 previewLink: 'https://eduardopoot.vercel.app/'
-            },
+            },*/
         ]
     },
     en: {
@@ -103,7 +148,25 @@ export const projectsTranslations = {
                 codeLink: 'https://github.com/Eduard0PC/Cveria',
                 previewLink: 'https://cveria.vercel.app/'
             },
-            /*
+            {
+                technologies: [
+                    { name: 'Flutter', icon: FlutterIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
+                    { name: 'C#', icon: CSharpIcon, colorBack: 'bg-purple-500/10', colorBorder: 'border-purple-500' },
+                ],
+                title: 'MediApp',
+                image: 'proyects/mediapp.webp',
+                description: "Mobile application for managing patient's medical appointments and doctor's medical appointments.",
+                codeLink: 'https://github.com/Eduard0PC/MediApp',
+            },
+            {
+                technologies: [
+                    { name: 'Java', icon: JavaIcon, colorBack: 'bg-red-500/10', colorBorder: 'border-red-500' }
+                ],
+                title: 'SPACLES',
+                image: 'proyects/spacles.webp',
+                description: 'Java-developed spaceship game where the player must dodge attacks and shoot Cthulhu to defeat him.',
+                codeLink: 'https://github.com/Eduard0PC/SPACLES',
+            },
             {
                 technologies: [
                     { name: 'HTML', icon: HtmlIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-400' },
@@ -117,7 +180,6 @@ export const projectsTranslations = {
                 description: "Web platform for managing a restaurant's sales and products.",
                 codeLink: 'https://github.com/Eduard0PC/HanburguesaPlatform',
             },
-            */
             {
                 technologies: [
                     { name: 'HTML', icon: HtmlIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-400' },
@@ -148,6 +210,29 @@ export const projectsTranslations = {
             },
             {
                 technologies: [
+                    { name: 'Angular', icon: AngularIcon, colorBack: 'bg-red-300/10', colorBorder: 'border-red-300' },
+                    { name: 'TS', icon: TsIcon, colorBack: 'bg-blue-400/10', colorBorder: 'border-blue-400' },
+                    { name: 'Bootstrap', icon: BootstrapIcon, colorBack: 'bg-purple-300/10', colorBorder: 'border-purple-300' },
+                ],
+                title: 'MusicSearch',
+                image: 'proyects/musicsearch.webp',
+                description: 'Web application to search for songs and artists using the Deezer API.',
+                codeLink: 'https://github.com/Eduard0PC/MusicSearch',
+                previewLink: 'https://musicsearch.vercel.app/'  
+            },
+            {
+                technologies: [
+                    { name: 'Flutter', icon: FlutterIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' }
+                ],
+                title: 'Music Test App',
+                image: 'proyects/musictestapp.webp',
+                description: 'Mobile application for searching songs and performing unit tests in Flutter.',
+                codeLink: 'https://github.com/Eduard0PC/Music-TestApp',
+
+            }
+            /*
+            {
+                technologies: [
                     { name: 'Astro', icon: AstroIcon, colorBack: 'bg-orange-400/10', colorBorder: 'border-orange-300' },
                     { name: 'JS', icon: JsIcon, colorBack: 'bg-yellow-300/10', colorBorder: 'border-yellow-300' },
                     { name: 'Tailwind', icon: TailwindIcon, colorBack: 'bg-blue-300/10', colorBorder: 'border-blue-300' },
@@ -157,7 +242,8 @@ export const projectsTranslations = {
                 description: 'Personal portfolio showcasing my projects and skills.',
                 codeLink: 'https://github.com/Eduard0PC/Portafolio',
                 previewLink: 'https://eduardopoot.vercel.app/'
-            },
+            },*/
+            
         ]
     }
 };

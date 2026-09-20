@@ -16,6 +16,10 @@ import PostgreIcon from "./icons/tech/PostgreIcon.astro";
 import VercelIcon from "./icons/tech/VercelIcon.astro";
 import TsIcon from "./icons/tech/TsIcon.astro";
 import PhpIcon from "./icons/tech/PhpIcon.astro";
+import LinuxIcon from "./icons/tech/LinuxIcon.astro";
+import AngularIcon from "./icons/tech/AngularIcon.astro";
+import FlutterIcon from "./icons/tech/FlutterIcon.astro";
+import CSharpIcon from "./icons/tech/CSharpIcon.astro";
 ---
 
 <div class="relative w-full mt-20">
@@ -23,6 +27,10 @@ import PhpIcon from "./icons/tech/PhpIcon.astro";
     id="carousel"
     class="flex overflow-x-auto gap-4 sm:gap-6 px-2 py-4 scrollbar-hide"
   >
+    <Tech class="bg-gray-300/10 border-gray-300">
+      <LinuxIcon class="size-12" />
+      <p class="text-white mt-2 text-sm">Linux</p>
+    </Tech>
     <Tech class="bg-orange-400/10 border-orange-400">
       <HtmlIcon class="size-12" />
       <p class="text-white mt-2 text-sm">HTML</p>
@@ -39,6 +47,11 @@ import PhpIcon from "./icons/tech/PhpIcon.astro";
       <TsIcon class="size-12" />
       <p class="text-white mt-2 text-sm">Typescript</p>
     </Tech>
+    <Tech class="bg-blue-400/10 border-blue-400">
+      <FlutterIcon class="size-12" />
+      <p class="text-white mt-2 text-sm">Flutter</p>
+
+    </Tech>
     <Tech class="bg-purple-500/10 border-purple-500">
       <PhpIcon class="size-12" />
       <p class="text-white mt-2 text-sm">PHP</p>
@@ -48,8 +61,16 @@ import PhpIcon from "./icons/tech/PhpIcon.astro";
       <p class="text-white mt-2 text-sm">Tailwind</p>
     </Tech>
     <Tech class="bg-red-500/10 border-red-500">
+      <AngularIcon class="size-12" />
+      <p class="text-white mt-2 text-sm">Angular</p>
+    </Tech>
+    <Tech class="bg-red-500/10 border-red-500">
       <JavaIcon class="size-12" />
       <p class="text-white mt-2 text-sm">Java</p>
+    </Tech>
+    <Tech class="bg-purple-500/10 border-purple-500">
+      <CSharpIcon class="size-12" />
+      <p class="text-white mt-2 text-sm">C#</p>
     </Tech>
     <Tech class="bg-blue-300/10 border-blue-300">
       <ReactIcon class="size-12" />

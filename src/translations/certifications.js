@@ -22,6 +22,11 @@ export const certificationsTranslations = {
                 image: 'certifications/Python_Cisco.webp',
                 description: 'Python Essentials 1 certification from Cisco Networking Academy.',
             },
+            {
+                title: 'Cisco CCNA 7 200-301',
+                image: 'certifications/CCNA_Cisco.webp',
+                description: 'Certificate of completion of the Cisco CCNA 7 200-301 course from Cisco Networking Academy within the company Plenumsoft.',
+            }
         ]
     }
 };

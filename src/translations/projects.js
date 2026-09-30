@@ -80,7 +80,7 @@ export const projectsTranslations = {
                 image: 'proyects/enloyados.webp',
                 description: 'Página web diseñada para un restaurante de sushi, donde se presentan sus platillos, información del negocio y opciones de contacto para los clientes.',
                 codeLink: 'https://github.com/Eduard0PC/Enloyados-Sushi',
-                previewLink: 'https://enloyados.wuaze.com/'
+                previewLink: 'https://eduard0pc.github.io/Enloyados-website/'
             },
             {
                 technologies: [
@@ -194,7 +194,7 @@ export const projectsTranslations = {
                 image: 'proyects/enloyados.webp',
                 description: 'Website designed for a sushi restaurant, showcasing their dishes, business information, and contact options for customers.',
                 codeLink: 'https://github.com/Eduard0PC/Enloyados-Sushi',
-                previewLink: 'https://enloyados.wuaze.com/'
+                previewLink: 'https://eduard0pc.github.io/Enloyados-website/'
             },
             {
                 technologies: [
